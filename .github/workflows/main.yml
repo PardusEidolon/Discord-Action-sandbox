@@ -1,6 +1,6 @@
 
 
-name: Discord action
+name: Discord Webhook Bot
 
 on: workflow_dispatch
 
