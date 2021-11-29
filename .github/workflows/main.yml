@@ -2,12 +2,13 @@
 
 name: Discord Webhook Bot
 
-on: workflow_dispatch:
-  inputs:
-    image:
-      description: 'An image to embed'
-      required: true
-      default 'https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png'
+on: 
+  workflow_dispatch:
+    inputs:
+      image:
+        description: 'An image to embed'
+        required: true
+        default: 'https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png'
 
 jobs:
   send-message:
