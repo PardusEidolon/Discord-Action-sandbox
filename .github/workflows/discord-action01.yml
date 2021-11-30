@@ -6,9 +6,13 @@ jobs:
   send-commit:
     runs-on: ubuntu-latest
     steps:
-    - name: Send Discord Message
-      uses: EhsanFox/djs-actions@0.1.0
-      with:
-        id: ${{ secrets.WEBHOOK_ID }}
-        token: ${{ secrets.WEBHOOK_TOKEN }}
-        title: "${{ github.context.repository }}"
+      - name: Checkout repo
+        uses: actions/checkout@v2
+        
+      - name: Discord Webhook Action
+        uses: tsickert/discord-webhook@v4.0.0
+        with:
+          webhook-url: ${{ secrets.DISCORD_WEBHOOK01 }}
+          raw-data: event-embed.json
+          
+
