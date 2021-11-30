@@ -1,4 +1,4 @@
-name: ZebTheWizards discord bot
+name: djs discord bot
 
 on: workflow_dispatch
 
@@ -6,10 +6,9 @@ jobs:
   send-commit:
     runs-on: ubuntu-latest
     steps:
-      - name: Discord Commits
-        uses: Sniddl/discord-commits@v1.3
-        with:
-          webhook: ${{ secrets.DISCORD_WEBHOOK01 }}
-          message: "This is a test"
-#           message: "Successful commit to **{{ github.context.payload.repository.owner.name }}/{{ github.context.payload.repository.name}}**.\nDiff: {{ github.context.payload.compare }}"
-#           embed: '{ "title": "{{ commit.title }}", "description": "{{ commit.description }}", "url": "{{ commit.url }}", "author": { "name": "{{ commit.author.name }} ({{ commit.author.username }})", "icon_url": "https://avatars.io/gravatar/{{ commit.author.email }}"} }'
+    - name: Send Discord Message
+      uses: EhsanFox/djs-actions@0.1.0
+      with:
+        id: ${{ secrets.DISCORD_WEBHOOK01 }}
+        token: ${{ secrets.DISCORD_WEBHOOK01 }}
+        title: "${{ github.context.repository }}"
