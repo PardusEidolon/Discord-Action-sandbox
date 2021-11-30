@@ -9,6 +9,6 @@ jobs:
     - name: Send Discord Message
       uses: EhsanFox/djs-actions@0.1.0
       with:
-        id: ${{ secrets.DISCORD_WEBHOOK01 }}
-        token: ${{ secrets.DISCORD_WEBHOOK01 }}
+        id: ${{ secrets.WEBHOOK_ID }}
+        token: ${{ secrets.WEBHOOK_TOKEN }}
         title: "${{ github.context.repository }}"
