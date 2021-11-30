@@ -1,6 +1,6 @@
 
 
-name: Discord Webhook Bot
+name: Ilshidurs Discord Bot
 
 on: 
   workflow_dispatch:
