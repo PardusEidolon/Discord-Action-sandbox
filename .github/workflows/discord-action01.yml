@@ -1,4 +1,4 @@
-name: djs discord bot
+name: tsickert discord bot
 
 on: workflow_dispatch
 
