@@ -13,6 +13,7 @@ jobs:
         uses: tsickert/discord-webhook@v4.0.0
         with:
           webhook-url: ${{ secrets.DISCORD_WEBHOOK01 }}
-          raw-data: event-embed.json
+#           raw-data: event-embed.json
+          content: ${{ GITHUB_REF_NAME }}
           
 
