@@ -1,7 +1,7 @@
 {
   "content": "See greeting below",
   "embeds": [{
-    "title":"${{ GITHUB_REF_NAME }}",
+    "title":"This is a test",
     "description":"helloWorld"
   }]
 }
