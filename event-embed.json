@@ -1,7 +1,4 @@
-  "channel_id": `${context.params.event.channel_id}`,
-  "content": `Wasssup!`,
-  "tts": false,
-  "message_reference": {
+    "message_reference": {
     "channel_id": "909642135396040714",
     "guild_id": "909636843761442847",
     "fail_if_not_exists": true
