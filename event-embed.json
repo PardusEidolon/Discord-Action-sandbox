@@ -1,6 +1,8 @@
 {
   "content": "See greeting below",
   "embeds": [{
+    "avatar_url": "https://i.imgur.com/oBPXx0D.png",
+    "username": "cat",
     "title":"This is a test",
     "description":"helloWorld"
   }]
