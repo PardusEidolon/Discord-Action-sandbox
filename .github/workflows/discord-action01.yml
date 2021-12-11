@@ -12,7 +12,7 @@ jobs:
         uses: jsdaniell/create-json@1.1.2
         with:
           name: "event-embed.json"
-          json: '{"username":"cat!","content":"Hello!"}'
+          json: '{"enbeds":[{"title":"Hello!","description":"Hi! :grinning:"}]}'
           dir: '/'
 #       - name: Discord Webhook Action
 #         uses: tsickert/discord-webhook@v4.0.0
