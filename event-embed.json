@@ -1,61 +1,15 @@
-    "message_reference": {
-    "channel_id": "909642135396040714",
-    "guild_id": "909636843761442847",
-    "fail_if_not_exists": true
-  },
-  "allowed_mentions": {
-    "replied_user": false,
-    "parse": [
-      "roles",
-      "users",
-      "everyone"
-    ],
-    "roles": [
-      "mr.123",
-      "mr.234",
-      "mrs.56"
-    ],
-    "users": [
-      "Pardus"
-    ]
-  },
+{
   "embeds": [
     {
-      "type": "rich",
-      "title": `This is a test`,
-      "description": `This test is to show the power of json embeds!`,
-      "color": 0xed9107,
+      "title": "I :heart: Commits!",
+      "description": "show me your commits!",
+      "color": 11057945,
       "fields": [
         {
-          "name": `What's this?`,
-          "value": `Over 9000`
-        },
-        {
-          "name": `How many of theses again?`,
-          "value": `Be sure to check out the lastest!`
+          "name": "Lorem Ipsum",
+          "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sit amet fringilla purus. Vivamus ut leo malesuada nibh \n Sed et facilisis ante, sed congue eros. Donec cursus, odio ut sollicitudin mattis, metus turpis sagittis tortor"
         }
-      ],
-      "timestamp": `2001-12-07T11:00:00.000Z`,
-      "image": {
-        "url": `https://i.imgur.com/oBPXx0D.png`,
-        "height": 0,
-        "width": 0
-      },
-      "thumbnail": {
-        "url": `https://i.imgur.com/oBPXx0D.png`,
-        "height": 0,
-        "width": 0
-      },
-      "author": {
-        "name": `FrenchDispatch`,
-        "url": `https://i.imgur.com/oBPXx0D.png`,
-        "icon_url": `https://i.imgur.com/oBPXx0D.png`
-      },
-      "footer": {
-        "text": `This is just a test`,
-        "icon_url": `https://i.imgur.com/oBPXx0D.png`
-      },
-      "url": `https://i.imgur.com/oBPXx0D.png`
+      ]
     }
   ]
-});
+}
