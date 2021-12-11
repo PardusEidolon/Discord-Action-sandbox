@@ -14,18 +14,18 @@ jobs:
           name: "event-embed.json"
           json: '{"enbeds":[{"title":"Hello!","description":"Hi! :grinning:"}]}'
           dir: '/'
-#       - name: Discord Webhook Action
-#         uses: tsickert/discord-webhook@v4.0.0
-#         with:
-#           webhook-url: ${{ secrets.DISCORD_WEBHOOK01 }}
-#           raw-data: event-embed.json
-#         content: "${{ github.repository }}"
-      - name: GitHub Commit & Push
-        uses: actions-js/push@v1.3
+      - name: Discord Webhook Action
+        uses: tsickert/discord-webhook@v4.0.0
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          author_email: "38515818+PardusEidolon@users.noreply.github.com"
-          author_name: "PardusEidolon"
-          message: "Github action complete."
+          webhook-url: ${{ secrets.DISCORD_WEBHOOK01 }}
+          raw-data: event-embed.json
+        content: "${{ github.repository }}"
+#       - name: GitHub Commit & Push
+#         uses: actions-js/push@v1.3
+#         with:
+#           github_token: ${{ secrets.GITHUB_TOKEN }}
+#           author_email: "38515818+PardusEidolon@users.noreply.github.com"
+#           author_name: "PardusEidolon"
+#           message: "Github action complete."
           
 
