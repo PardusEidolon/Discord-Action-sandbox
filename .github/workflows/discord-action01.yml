@@ -19,7 +19,7 @@ jobs:
         with:
           webhook-url: ${{ secrets.DISCORD_WEBHOOK01 }}
           raw-data: event-embed.json
-        content: "${{ github.repository }}"
+#         content: "${{ github.repository }}"
 #       - name: GitHub Commit & Push
 #         uses: actions-js/push@v1.3
 #         with:
