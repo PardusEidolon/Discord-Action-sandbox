@@ -8,12 +8,24 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v2
-        
-      - name: Discord Webhook Action
-        uses: tsickert/discord-webhook@v4.0.0
+      - name: create JSON
+        uses: jsdaniell/create-json@1.1.2
         with:
-          webhook-url: ${{ secrets.DISCORD_WEBHOOK01 }}
-          raw-data: event-embed.json
+          name: "event-embed.json"
+          json: '{"username":"cat!","content":"Hello!"}'
+          dir: '/'
+#       - name: Discord Webhook Action
+#         uses: tsickert/discord-webhook@v4.0.0
+#         with:
+#           webhook-url: ${{ secrets.DISCORD_WEBHOOK01 }}
+#           raw-data: event-embed.json
 #         content: "${{ github.repository }}"
+      - name: GitHub Commit & Push
+        uses: actions-js/push@v1.3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          author_email: "38515818+PardusEidolon@users.noreply.github.com"
+          author_name: "PardusEidolon"
+          message: "Github action complete."
           
 
