@@ -8,18 +8,20 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v2
-      - name: create JSON
-        uses: jsdaniell/create-json@1.1.2
-        with:
-          name: "event-embed.json"
-          json: '{"embeds":[{"color":14177041,"title":"Hello!","description":"Here is some test content to say hi, pretty cool ey ;)","fields":[{"name":"try me","value":"What did the cat say to the other cat?, blak blah blak! "}] }]}'
-          dir: '/'
+#       - name: create JSON
+#         uses: jsdaniell/create-json@1.1.2
+#         with:
+#           name: "event-embed.json"
+#           json: '{"embeds":[{"color":14177041,"title":"Hello!","description":"Here is some test content to say hi, pretty cool ey ;)","fields":[{"name":"try me","value":"What did the cat say to the other cat?, blak blah blak! "}] }]}'
+#           dir: '/'
       - name: Discord Webhook Action
         uses: tsickert/discord-webhook@v4.0.0
         with:
           webhook-url: ${{ secrets.DISCORD_WEBHOOK01 }}
-          raw-data: event-embed.json
-#           content: "${{ github.repository }}"
+#           raw-data: event-embed.json
+          content: "${{ github.sha }}"
+          
+# This should be used only when creating json embeds
 #       - name: GitHub Commit & Push
 #         uses: actions-js/push@v1.3
 #         with:
