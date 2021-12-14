@@ -20,9 +20,9 @@ jobs:
           webhook-url: ${{ secrets.DISCORD_WEBHOOK01 }}
 #           raw-data: event-embed.json
 #           content: "${{ github.sha }}"
-          embed-title: "Test 111"
-          embed-description: "tell me something mark, why did the 3 little green men have to abduct steve?"
-          embed-footer-text: "This is here to say that I really have no idea, why did I....?"
+          embed-title: "${{ github.base_ref }}"
+          embed-description: "${{ github.sha }}"
+          embed-footer-text: "${{ github.github.actor }}"
           embed-color: 14177041
           
           
