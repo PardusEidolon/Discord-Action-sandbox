@@ -1,6 +1,6 @@
 name: tsickert JSON discord bot
 # $HOME/.local/bin/gh2md
-# $GITHUB_REPOSITORY ${{github.repository}}-issues.md --no-closed-issues
+# gh2md $GITHUB_REPOSITORY ${{github.repository}}-issues.md --no-closed-issues
 on: workflow_dispatch
 
 jobs:
@@ -14,7 +14,8 @@ jobs:
         run: |
           pip3 install --user --upgrade setuptools
           pip3 install --user gh2md
-          gh2md -h
+          print $GITHUB_REPOSITORY
+
         env:
           GITHUB_ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
