@@ -8,12 +8,15 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v2
-#       - name: create JSON
-#         uses: jsdaniell/create-json@1.1.2
-#         with:
-#           name: "event-embed.json"
-#           json: '{"embeds":[{"color":14177041,"title":"Hello!","description":"Here is some test content to say hi, pretty cool ey ;)","fields":[{"name":"try me","value":"What did the cat say to the other cat?, blak blah blak! "}] }]}'
-#           dir: '/'
+
+      - name: github issues to a markdown file.
+        run: |
+          pip3 install --user --upgrade setuptools
+          pip3 install --user gh2md
+          $HOME/.local/bin/gh2md $GITHUB_REPOSITORY ~/${{github.repository}}-issues.md --no-closed-issues
+        env:
+          GITHUB_ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Discord Webhook Action
         uses: tsickert/discord-webhook@v4.0.0
         with:
@@ -24,15 +27,6 @@ jobs:
           embed-description: "This is a test"
           embed-footer-text: "${{ github.repository_owner }}"
           embed-color: 14177041
-          
-          
-# This should be used only when creating json embeds
-#       - name: GitHub Commit & Push
-#         uses: actions-js/push@v1.3
-#         with:
-#           github_token: ${{ secrets.GITHUB_TOKEN }}
-#           author_email: "38515818+PardusEidolon@users.noreply.github.com"
-#           author_name: "PardusEidolon"
-#           message: "Github action complete."
-          
+          embed-timestamp: "2021-12-15T08:54:41+00:00"
+          filename: "${{github.repository}}-issues.md"
 
