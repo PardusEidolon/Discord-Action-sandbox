@@ -20,9 +20,9 @@ jobs:
           webhook-url: ${{ secrets.DISCORD_WEBHOOK01 }}
 #           raw-data: event-embed.json
 #           content: "${{ github.sha }}"
-          embed-title: "${{ github.ref_name }}"
-          embed-description: "${{ github.ref_type }}/n${{ github.repository_owner }}"
-          embed-footer-text: "${{ github.github.job }}"
+          embed-title: "${{ github.repository	 }}"
+          embed-description: "This is a test"
+          embed-footer-text: "${{ github.repository_owner }}"
           embed-color: 14177041
           
           
